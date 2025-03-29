@@ -34,7 +34,8 @@ git clone https://github.com/AbdellahSbh/Bookstore_management_system_project.git
 
 2. Create a virtual environment and activate it:
 
-python -m venv env env\Scripts\activate # On Windows source env/bin/activate # On macOS/Linux
+python -m venv env env\Scripts\activate # On Windows 
+source env/bin/activate # On macOS/Linux
 
 3. Install dependencies:
 
