@@ -81,13 +81,6 @@ python manage.py runserver
 - Input validation and error handling are implemented.
 - The system assumes authors already exist when adding a book manually.
 
-## Future Enhancements
-
-- Add user authentication and role-based access control
-- Refactor views into Django REST Framework endpoints
-- Add HTML templates or frontend interface
-- Implement pagination and detailed logging
-
 ## License
 
 This project is developed for academic purposes as part of the Programming Clinic module at Lancaster University Leipzig, Michaelmas Term 2025.
