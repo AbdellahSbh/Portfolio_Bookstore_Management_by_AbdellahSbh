@@ -23,7 +23,7 @@ This is a Django-based backend project that provides full CRUD functionality for
 
 ## Project Structure
 
-├── bookstore/ # Django project settings │ ├── settings.py │ └── ... ├── inventory/ # Django app with models and views │ ├── models.py │ ├── views.py │ ├── urls.py │ └── ... ├── uml_diagrams/ # Optional - Use case, class, sequence diagrams ├── slides/ # Optional - Weekly presentation slides ├── db.sqlite3 # Optional - SQLite database ├── manage.py └── requirements.txt
+├── inventory/ # Django app: book & author models, views, and routes │ ├── migrations/ │ ├── admin.py │ ├── apps.py │ ├── models.py │ ├── tests.py │ ├── urls.py │ └── views.py │ ├── readers_haven/ # Django project configuration │ ├── init.py │ ├── asgi.py │ ├── settings.py │ ├── urls.py │ └── wsgi.py │ ├── manage.py ├── requirements.txt └── README.md
 
 
 ## Installation and Running
