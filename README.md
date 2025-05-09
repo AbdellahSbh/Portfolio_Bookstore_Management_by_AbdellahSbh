@@ -1,8 +1,10 @@
-# Bookstore Management System
+# Bookstore Management System 📚
 
 This is a Django-based backend project that provides full CRUD functionality for managing books and authors in a bookstore inventory. It also integrates with the Google Books API to search and fetch book data.
 
-## Features
+---
+
+## 📌 Features
 
 - Full CRUD operations for books and authors
 - Sorting inventory by title or price (ascending or descending)
@@ -12,77 +14,120 @@ This is a Django-based backend project that provides full CRUD functionality for
   - Add books directly from Google
   - Bulk add up to 10,000 books
 - Bulk delete books by title
-- JSON-based API responses (no frontend included)
+- JSON-based API responses (no frontend)
 
-## Technologies Used
+---
+
+## 🛠️ Technologies Used
 
 - Python 3.11
 - Django 4.x
 - SQLite3 (default Django database)
-- Requests (for Google Books API integration)
+- `requests` library (for Google Books API integration)
 
-## Project Structure
+---
 
-├── inventory/ # Django app: book & author models, views, and routes │ ├── migrations/ │ ├── admin.py │ ├── apps.py │ ├── models.py │ ├── tests.py │ ├── urls.py │ └── views.py │ ├── readers_haven/ # Django project configuration │ ├── init.py │ ├── asgi.py │ ├── settings.py │ ├── urls.py │ └── wsgi.py │ ├── manage.py ├── requirements.txt └── README.md
+## 📁 Project Structure
 
+```text
+bookstore/
+├── inventory/                # Django app for book & author logic
+│   ├── migrations/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+├── readers_haven/           # Django project config
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+├── requirements.txt
+└── README.md
+```
 
-## Installation and Running
+---
 
-1. Clone the repository:
+## 🚀 Installation & Running
 
-git clone https://github.com/AbdellahSbh/Bookstore_management_system_project.git cd Bookstore_management_system_project
+### 1. Clone the repository
 
-2. Create a virtual environment and activate it:
+```bash
+git clone https://github.com/AbdellahSbh/Portfolio_Bookstore_Management_by_AbdellahSbh.git
+cd Portfolio_Bookstore_Management_by_AbdellahSbh
+```
 
-python -m venv env env\Scripts\activate # On Windows 
-source env/bin/activate # On macOS/Linux
+### 2. Create a virtual environment and activate it
 
-3. Install dependencies:
+```bash
+# Windows
+python -m venv env
+env\Scripts\activate
 
+# macOS/Linux
+python3 -m venv env
+source env/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
+### 4. Run migrations
 
-4. Run database migrations:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 
-python manage.py makemigrations python manage.py migrate
+### 5. Start the development server
 
-
-5. Start the development server:
-
+```bash
 python manage.py runserver
+```
 
+---
 
-## API Endpoints
+## 📡 API Endpoints
 
 ### Books
 
-| Endpoint                   | Method | Description                                              |
-|---------------------------|--------|----------------------------------------------------------|
-| /sort_inventory           | GET    | Sort books by title or price (AtoZ, ZtoA, Asc, Desc)     |
-| /search_books             | GET    | Search books from Google API by title or author          |
-| /add_books                | GET    | Add a new book manually (title, authors, price, stock)   |
-| /update_book              | GET    | Update an existing book’s information                    |
-| /delete_book              | GET    | Delete a book by title                                   |
-| /fetch_books_from_google  | GET    | Fetch a list of books via keyword search                 |
-| /fetch_and_add_book       | GET    | Search Google and auto-add the first book result         |
-| /bulk_add_books           | GET    | Bulk import up to 10,000 books from Google Books         |
-| /bulk_delete_books        | GET    | Delete multiple books by passing a list of titles        |
+```text
+GET  /sort_inventory            → Sort books by title or price (AtoZ, ZtoA, Asc, Desc)
+GET  /search_books              → Search books from Google API by title or author
+GET  /add_books                 → Add a new book manually
+GET  /update_book              → Update book information
+GET  /delete_book              → Delete a book by title
+GET  /fetch_books_from_google   → Search and list books from Google Books API
+GET  /fetch_and_add_book        → Search and auto-add the first Google book result
+GET  /bulk_add_books            → Bulk import books from Google Books API
+GET  /bulk_delete_books         → Bulk delete books by title
+```
 
 ### Authors
 
-| Endpoint       | Method | Description                               |
-|----------------|--------|-------------------------------------------|
-| /add_authors   | GET    | Add a new author (name and optional bio)  |
-| /get_authors   | GET    | Retrieve all existing authors             |
+```text
+GET  /add_authors     → Add a new author (name and optional bio)
+GET  /get_authors     → Retrieve all existing authors
+```
 
-## Notes
+---
 
-- All endpoints are accessed using the GET method for simplicity, but REST best practices recommend using POST, PUT, DELETE for data modification.
-- Input validation and error handling are implemented.
-- The system assumes authors already exist when adding a book manually.
+## 📝 Notes
 
-## License
+- All endpoints use the GET method for simplicity, but actual REST APIs would use POST, PUT, or DELETE for changes.
+- Input validation and basic error handling are implemented.
+- The system assumes authors already exist when adding books manually.
 
-This project is developed for academic purposes as part of the Programming Clinic module at Lancaster University Leipzig, Michaelmas Term 2025.
+---
 
+## 📄 License
 
+This project is developed for academic purposes as part of the Programming Clinic module  
+at Lancaster University Leipzig – Michaelmas Term 2025.
